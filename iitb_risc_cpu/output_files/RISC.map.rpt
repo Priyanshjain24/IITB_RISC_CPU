@@ -1,0 +1,650 @@
+Analysis & Synthesis report for RISC
+Sat May 06 22:36:26 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P5"
+ 10. Port Connectivity Checks: "Datapath:add_instance|Stage_5:S5|mux_four_to_one_16bit:MUX1"
+ 11. Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P4"
+ 12. Port Connectivity Checks: "Datapath:add_instance|Stage_4:S4|reg_1:Z"
+ 13. Port Connectivity Checks: "Datapath:add_instance|Big_Pipe_reg:P3"
+ 14. Port Connectivity Checks: "Datapath:add_instance|Stage_3:S3|mux_four_to_one_3bit:MUX_3"
+ 15. Port Connectivity Checks: "Datapath:add_instance|Stage_3:S3|mux_four_to_one_16bit:MUX_2"
+ 16. Port Connectivity Checks: "Datapath:add_instance|Stage_3:S3|mux_four_to_one_16bit:MUX_1"
+ 17. Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P2"
+ 18. Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P1"
+ 19. Port Connectivity Checks: "Datapath:add_instance|Stage_1:S1|mux_two_to_one_16bit:MUX_PC_ADD"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat May 06 22:36:26 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; RISC                                        ;
+; Top-level Entity Name              ; DUT                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 2                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; DUT                ; RISC               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+; DUT.vhdl                         ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl                  ;         ;
+; reg_hazard.vhd                   ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd            ;         ;
+; Stage_6.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd               ;         ;
+; Stage_5.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd               ;         ;
+; Stage_4.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd               ;         ;
+; Stage_1.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd               ;         ;
+; register_1bit.vhd                ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd         ;         ;
+; six_extender.vhd                 ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd          ;         ;
+; register_file.vhd                ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd         ;         ;
+; mux-two-to-one-16bit.vhd         ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd  ;         ;
+; mux-four-to-one-16bit.vhd        ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd ;         ;
+; Instruction_Memory.vhd           ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd    ;         ;
+; extender.vhd                     ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd              ;         ;
+; Data_Memory.vhd                  ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd           ;         ;
+; clock.vhd                        ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd                 ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd                   ;         ;
+; Datapath.vhd                     ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd              ;         ;
+; Controller.vhd                   ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd            ;         ;
+; Pipeline_Register.vhd            ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd     ;         ;
+; Temp_Register.vhd                ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd         ;         ;
+; Add_Immediate.vhd                ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd         ;         ;
+; decider.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd               ;         ;
+; Stage_2.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd               ;         ;
+; Stage_3.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd               ;         ;
+; mux-four-to-one-3bit.vhd         ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd  ;         ;
+; BigPreg.vhd                      ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd               ;         ;
+; mem_hazard.vhd                   ; yes             ; User VHDL File  ; C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd            ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+;                                             ;                 ;
+; Total combinational functions               ; 0               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 0               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 0               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 2               ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; input_vector[0] ;
+; Maximum fan-out                             ; 1               ;
+; Total fan-out                               ; 2               ;
+; Average fan-out                             ; 0.50            ;
++---------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |DUT                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 2    ; 0            ; 0          ; |DUT                ; DUT         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P5" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; wr   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Stage_5:S5|mux_four_to_one_16bit:MUX1" ;
++------+-------+----------+---------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                       ;
++------+-------+----------+---------------------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                                  ;
++------+-------+----------+---------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P4" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; wr   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Stage_4:S4|reg_1:Z"                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Big_Pipe_reg:P3" ;
++------+-------+----------+-----------------------------------------+
+; Port ; Type  ; Severity ; Details                                 ;
++------+-------+----------+-----------------------------------------+
+; wr   ; Input ; Info     ; Stuck at VCC                            ;
++------+-------+----------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Stage_3:S3|mux_four_to_one_3bit:MUX_3" ;
++------+-------+----------+---------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                       ;
++------+-------+----------+---------------------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                                  ;
++------+-------+----------+---------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Stage_3:S3|mux_four_to_one_16bit:MUX_2" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Stage_3:S3|mux_four_to_one_16bit:MUX_1" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P2" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; wr   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Pipe_reg:P1" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; wr   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:add_instance|Stage_1:S1|mux_two_to_one_16bit:MUX_PC_ADD" ;
++----------+-------+----------+----------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                        ;
++----------+-------+----------+----------------------------------------------------------------+
+; a[15..1] ; Input ; Info     ; Stuck at GND                                                   ;
+; a[0]     ; Input ; Info     ; Stuck at VCC                                                   ;
++----------+-------+----------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 2                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat May 06 22:36:13 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhdl
+    Info (12022): Found design unit 1: DUT-DutWrap File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl Line: 12
+    Info (12023): Found entity 1: DUT File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file reg_hazard.vhd
+    Info (12022): Found design unit 1: reg_hazard-danger File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd Line: 18
+    Info (12023): Found entity 1: reg_hazard File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
+    Info (12022): Found design unit 1: Testbench-Behave File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl Line: 9
+    Info (12023): Found entity 1: Testbench File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file stage_6.vhd
+    Info (12022): Found design unit 1: Stage_6-path_6 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd Line: 15
+    Info (12023): Found entity 1: Stage_6 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stage_5.vhd
+    Info (12022): Found design unit 1: Stage_5-path_5 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd Line: 19
+    Info (12023): Found entity 1: Stage_5 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stage_4.vhd
+    Info (12022): Found design unit 1: Stage_4-path_4 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 15
+    Info (12023): Found entity 1: Stage_4 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file penc.vhd
+    Info (12022): Found design unit 1: Penc_8_3-tech File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/penc.vhd Line: 14
+    Info (12023): Found entity 1: Penc_8_3 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/penc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file stage_1.vhd
+    Info (12022): Found design unit 1: Stage_1-path_1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 15
+    Info (12023): Found entity 1: Stage_1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file register_1bit.vhd
+    Info (12022): Found design unit 1: reg_1-reg1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd Line: 12
+    Info (12023): Found entity 1: reg_1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file six_extender.vhd
+    Info (12022): Found design unit 1: six_extender-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd Line: 9
+    Info (12023): Found entity 1: six_extender File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
+    Info (12022): Found design unit 1: Register_File-arch File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd Line: 14
+    Info (12023): Found entity 1: Register_File File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file nine_extender.vhd
+    Info (12022): Found design unit 1: nine_extender-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/nine_extender.vhd Line: 9
+    Info (12023): Found entity 1: nine_extender File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/nine_extender.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux-two-to-one-1bit.vhd
+    Info (12022): Found design unit 1: mux_two_to_one_1bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-1bit.vhd Line: 8
+    Info (12023): Found entity 1: mux_two_to_one_1bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux-two-to-one-16bit.vhd
+    Info (12022): Found design unit 1: mux_two_to_one_16bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd Line: 8
+    Info (12023): Found entity 1: mux_two_to_one_16bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux-four-to-one-1bit.vhd
+    Info (12022): Found design unit 1: mux_four_to_one_1bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-1bit.vhd Line: 10
+    Info (12023): Found entity 1: mux_four_to_one_1bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux-four-to-one-16bit.vhd
+    Info (12022): Found design unit 1: mux_four_to_one_16bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd Line: 10
+    Info (12023): Found entity 1: mux_four_to_one_16bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux-eight-to-one-1bit.vhd
+    Info (12022): Found design unit 1: mux_eight_to_one_1bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-eight-to-one-1bit.vhd Line: 8
+    Info (12023): Found entity 1: mux_eight_to_one_1bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-eight-to-one-1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux-eight-to-one-16bit.vhd
+    Info (12022): Found design unit 1: mux_eight_to_one_16bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-eight-to-one-16bit.vhd Line: 8
+    Info (12023): Found entity 1: mux_eight_to_one_16bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-eight-to-one-16bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file instruction_memory.vhd
+    Info (12022): Found design unit 1: Instruction_Memory-mem File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd Line: 13
+    Info (12023): Found entity 1: Instruction_Memory File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file extender.vhd
+    Info (12022): Found design unit 1: extender-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd Line: 9
+    Info (12023): Found entity 1: extender File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info (12022): Found design unit 1: Data_Memory-mem File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd Line: 14
+    Info (12023): Found entity 1: Data_Memory File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
+    Info (12022): Found design unit 1: clock_generator-bhv File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd Line: 8
+    Info (12023): Found entity 1: clock_generator File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 15
+    Info (12023): Found entity 1: alu File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file 2adder-16bit.vhd
+    Info (12022): Found design unit 1: Adder-Behavioral File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/2adder-16bit.vhd Line: 12
+    Info (12023): Found entity 1: Adder File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/2adder-16bit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: Datapath-path File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 10
+    Info (12023): Found entity 1: Datapath File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
+    Info (12022): Found design unit 1: Controller-con File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 14
+    Info (12023): Found entity 1: Controller File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file pipeline_register.vhd
+    Info (12022): Found design unit 1: Pipe_reg-reg1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd Line: 14
+    Info (12023): Found entity 1: Pipe_reg File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file temp_register.vhd
+    Info (12022): Found design unit 1: Temp_reg-reg1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd Line: 14
+    Info (12023): Found entity 1: Temp_reg File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file add_immediate.vhd
+    Info (12022): Found design unit 1: Add_Imm-Behavioral File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 11
+    Info (12023): Found entity 1: Add_Imm File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decider.vhd
+    Info (12022): Found design unit 1: decider-dec File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd Line: 13
+    Info (12023): Found entity 1: decider File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stage_2.vhd
+    Info (12022): Found design unit 1: Stage_2-path_2 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd Line: 12
+    Info (12023): Found entity 1: Stage_2 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stage_3.vhd
+    Info (12022): Found design unit 1: Stage_3-path_3 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 16
+    Info (12023): Found entity 1: Stage_3 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux-four-to-one-3bit.vhd
+    Info (12022): Found design unit 1: mux_four_to_one_3bit-Struct File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd Line: 10
+    Info (12023): Found entity 1: mux_four_to_one_3bit File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bigpreg.vhd
+    Info (12022): Found design unit 1: Big_Pipe_reg-reg1 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd Line: 14
+    Info (12023): Found entity 1: Big_Pipe_reg File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mem_hazard.vhd
+    Info (12022): Found design unit 1: mem_hazard-danger File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd Line: 14
+    Info (12023): Found entity 1: mem_hazard File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd Line: 6
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:add_instance" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl Line: 20
+Warning (10541): VHDL Signal Declaration warning at Datapath.vhd(7): used implicit default value for signal "outp" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 7
+Info (12128): Elaborating entity "clock_generator" for hierarchy "Datapath:add_instance|clock_generator:clock" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 99
+Info (12128): Elaborating entity "Stage_1" for hierarchy "Datapath:add_instance|Stage_1:S1" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 101
+Warning (10540): VHDL Signal Declaration warning at Stage_1.vhd(92): used explicit default value for signal "one" because signal was never assigned a value File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 92
+Info (12128): Elaborating entity "Register_File" for hierarchy "Datapath:add_instance|Stage_1:S1|Register_File:RF" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 96
+Warning (10445): VHDL Subtype or Type Declaration warning at register_file.vhd(23): subtype or type has null range File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd Line: 23
+Info (12128): Elaborating entity "Instruction_Memory" for hierarchy "Datapath:add_instance|Stage_1:S1|Instruction_Memory:IM" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 97
+Info (12128): Elaborating entity "Add_Imm" for hierarchy "Datapath:add_instance|Stage_1:S1|Add_Imm:ADD" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 98
+Warning (10631): VHDL Process Statement warning at Add_Immediate.vhd(36): inferring latch(es) for signal or variable "temp1", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[0]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[1]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[2]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[3]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[4]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[5]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[6]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[7]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[8]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[9]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[10]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[11]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[12]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[13]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[14]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (10041): Inferred latch for "temp1[15]" at Add_Immediate.vhd(36) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd Line: 36
+Info (12128): Elaborating entity "six_extender" for hierarchy "Datapath:add_instance|Stage_1:S1|six_extender:EX" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 99
+Info (12128): Elaborating entity "mux_two_to_one_16bit" for hierarchy "Datapath:add_instance|Stage_1:S1|mux_two_to_one_16bit:MUX_PC_ADD" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 100
+Info (12128): Elaborating entity "Temp_reg" for hierarchy "Datapath:add_instance|Stage_1:S1|Temp_reg:PC_T" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd Line: 101
+Info (12128): Elaborating entity "Pipe_reg" for hierarchy "Datapath:add_instance|Pipe_reg:P1" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 102
+Info (12128): Elaborating entity "Stage_2" for hierarchy "Datapath:add_instance|Stage_2:S2" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 104
+Info (12128): Elaborating entity "Controller" for hierarchy "Datapath:add_instance|Stage_2:S2|Controller:Cont" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd Line: 33
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "Z_w", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "C_w", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "RF_w", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "Mem_w", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "car", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "decide", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at Controller.vhd(24): inferring latch(es) for signal or variable "ALU_cs", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "ALU_cs[0]" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "ALU_cs[1]" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "ALU_cs[2]" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "decide[0]" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "decide[1]" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "car" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "Mem_w" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "RF_w" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "C_w" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (10041): Inferred latch for "Z_w" at Controller.vhd(24) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd Line: 24
+Info (12128): Elaborating entity "Stage_3" for hierarchy "Datapath:add_instance|Stage_3:S3" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 107
+Warning (10540): VHDL Signal Declaration warning at Stage_3.vhd(60): used explicit default value for signal "zero" because signal was never assigned a value File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 60
+Info (12128): Elaborating entity "extender" for hierarchy "Datapath:add_instance|Stage_3:S3|extender:extend" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 68
+Info (12128): Elaborating entity "reg_hazard" for hierarchy "Datapath:add_instance|Stage_3:S3|reg_hazard:hazard" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 69
+Info (12128): Elaborating entity "mux_four_to_one_16bit" for hierarchy "Datapath:add_instance|Stage_3:S3|mux_four_to_one_16bit:MUX_1" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 70
+Info (12128): Elaborating entity "mux_four_to_one_3bit" for hierarchy "Datapath:add_instance|Stage_3:S3|mux_four_to_one_3bit:MUX_3" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd Line: 72
+Info (12128): Elaborating entity "Big_Pipe_reg" for hierarchy "Datapath:add_instance|Big_Pipe_reg:P3" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 108
+Info (12128): Elaborating entity "Stage_4" for hierarchy "Datapath:add_instance|Stage_4:S4" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 110
+Warning (10036): Verilog HDL or VHDL warning at Stage_4.vhd(47): object "Z_flag" assigned a value but never read File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 47
+Warning (10036): Verilog HDL or VHDL warning at Stage_4.vhd(48): object "A2" assigned a value but never read File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 48
+Info (12128): Elaborating entity "decider" for hierarchy "Datapath:add_instance|Stage_4:S4|decider:decider1" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 54
+Info (12128): Elaborating entity "alu" for hierarchy "Datapath:add_instance|Stage_4:S4|alu:ALU1" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at alu.vhd(120): inferring latch(es) for signal or variable "temp1", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Warning (10631): VHDL Process Statement warning at alu.vhd(120): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Warning (10631): VHDL Process Statement warning at alu.vhd(120): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Warning (10631): VHDL Process Statement warning at alu.vhd(120): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Warning (10631): VHDL Process Statement warning at alu.vhd(120): inferring latch(es) for signal or variable "temp2", which holds its previous value in one or more paths through the process File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[0]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[1]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[2]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[3]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[4]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[5]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[6]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[7]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[8]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[9]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[10]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[11]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[12]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[13]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[14]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp2[15]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "Z" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "C" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[0]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[1]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[2]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[3]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[4]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[5]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[6]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[7]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[8]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[9]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[10]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[11]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[12]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[13]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[14]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "output[15]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[0]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[1]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[2]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[3]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[4]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[5]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[6]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[7]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[8]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[9]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[10]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[11]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[12]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[13]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[14]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[15]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (10041): Inferred latch for "temp1[16]" at alu.vhd(120) File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd Line: 120
+Info (12128): Elaborating entity "reg_1" for hierarchy "Datapath:add_instance|Stage_4:S4|reg_1:C" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd Line: 56
+Info (12128): Elaborating entity "Stage_5" for hierarchy "Datapath:add_instance|Stage_5:S5" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 113
+Warning (10540): VHDL Signal Declaration warning at Stage_5.vhd(54): used explicit default value for signal "zero" because signal was never assigned a value File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd Line: 54
+Info (12128): Elaborating entity "Data_Memory" for hierarchy "Datapath:add_instance|Stage_5:S5|Data_Memory:Data_mem" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd Line: 62
+Warning (10445): VHDL Subtype or Type Declaration warning at Data_Memory.vhd(24): subtype or type has null range File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd Line: 24
+Info (12128): Elaborating entity "mem_hazard" for hierarchy "Datapath:add_instance|Stage_5:S5|mem_hazard:hazard" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at mem_hazard.vhd(19): signal "op_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at mem_hazard.vhd(25): signal "op_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd Line: 25
+Info (12128): Elaborating entity "Stage_6" for hierarchy "Datapath:add_instance|Stage_6:S6" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd Line: 116
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "output_vector[0]" is stuck at GND File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl Line: 9
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "input_vector[0]" File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl Line: 8
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Sat May 06 22:36:26 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:07
+
+

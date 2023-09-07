@@ -1,0 +1,38 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity Big_Pipe_reg is
+port(
+  clk, rst, wr: in std_logic;
+  Din: in std_logic_vector(50 downto 0);
+  Dout: out std_logic_vector(50 downto 0));
+end entity;
+
+architecture reg1 of Big_Pipe_reg is
+  signal reg: std_logic_vector(70 downto 0);
+begin
+process(clk)
+  begin
+    
+      if(rst = '1') then
+          reg <= "000000000000000000000000000000000000000000000000000";
+			 Dout <= "000000000000000000000000000000000000000000000000000";
+
+      else
+        if(wr = '1' and rising_edge(clk)) then
+          reg <= Din;
+			 Dout <= Din; --added
+        end if;
+		end if;
+    
+	 if(wr='0')then
+		Dout <= reg;
+		end if;
+	
+
+	 end process;
+
+end reg1;

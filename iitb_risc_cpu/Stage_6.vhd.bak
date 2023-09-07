@@ -1,0 +1,37 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Stage_6 is
+	port( clk, rst;
+	P5_O: in std_logic_vector(50 downto 0);
+	RF_D: out std_logic_vector(15 downto 0);
+    RF_A: out std_logic_vector(2 downto 0));
+    RF_w: out std_logic;
+end entity;
+
+architecture path_6 of Stage_6 is
+
+----------------------------------------------------Components-----------------------------------------------------
+
+
+
+-------------------------------------------------------Signals----------------------------------------------------
+
+
+
+-------------------------------------------------------Datapath---------------------------------------------------
+
+
+
+--------------------------------------------------Extra Connections-----------------------------------------------
+
+RF_D <= P5_O(19 downto 4);
+RF_A <= P5_O(3 downto 1);
+RF_w <= P5_O(0);
+
+------------------------------------------------------------------------------------------------------------------
+
+end architecture;
+

@@ -1,0 +1,1202 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/simulation/modelsim
+Eadd_imm
+Z1 w1683359560
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 20
+R0
+Z5 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd
+Z6 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd
+l0
+L5 1
+VjNfU7392QPRUQYGocYN@O2
+!s100 jQg6c??fj6d23C<cdhJ>;0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1683394481
+!i10b 1
+Z9 !s108 1683394481.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd|
+Z11 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 7 add_imm 0 22 jNfU7392QPRUQYGocYN@O2
+!i122 20
+l35
+L11 38
+VKR01F:4ofRFUOI5;JA[ni2
+!s100 lYBgSQcJJcZXO;JN60dMO3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu
+Z14 w1683359561
+R2
+R3
+R4
+!i122 15
+R0
+Z15 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd
+Z16 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd
+l0
+L5 1
+VCe4?392^_?8@P?aYW=;g63
+!s100 Oo^nfCNIed2@VNN?8ASeM1
+R7
+31
+Z17 !s110 1683394480
+!i10b 1
+Z18 !s108 1683394480.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd|
+Z20 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 Ce4?392^_?8@P?aYW=;g63
+!i122 15
+l118
+L15 145
+V^L>L42S_lb4?lk<4b9HJU1
+!s100 [iZ71SWbzR=L1;GnCT[Xa1
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ebig_pipe_reg
+Z21 w1683383657
+R2
+R3
+R4
+!i122 25
+R0
+Z22 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd
+Z23 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd
+l0
+L7 1
+VI[LC^6l^;c9N3>1fhPkMz0
+!s100 =HBEoiYMl:8Yn]zA?z<Fi2
+R7
+31
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd|
+Z25 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd|
+!i113 1
+R12
+R13
+Areg1
+R2
+R3
+R4
+DEx4 work 12 big_pipe_reg 0 22 I[LC^6l^;c9N3>1fhPkMz0
+!i122 25
+l16
+Z26 L14 25
+VlDF6n9o:<1GRRz;>g8RBA0
+!s100 lHQzkh4HDhClT368=8b3B0
+R7
+31
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Eclock_generator
+R1
+R3
+R4
+!i122 14
+R0
+Z27 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd
+Z28 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd
+l0
+L4 1
+VLG6Tm^^]d<TNiR5MiFkeS3
+!s100 ;j=d[m?Z=KUi1JH2VQD6Q2
+R7
+31
+R17
+!i10b 1
+R18
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd|
+Z30 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd|
+!i113 1
+R12
+R13
+Abhv
+R3
+R4
+DEx4 work 15 clock_generator 0 22 LG6Tm^^]d<TNiR5MiFkeS3
+!i122 14
+l12
+L8 10
+V2V?HTT>AEReOZhZcUV3Db1
+!s100 oITU4NJ8hd6i[FNS3b2D_1
+R7
+31
+R17
+!i10b 1
+R18
+R29
+R30
+!i113 1
+R12
+R13
+Econtroller
+Z31 w1683383808
+R2
+R3
+R4
+!i122 17
+R0
+Z32 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd
+Z33 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd
+l0
+L6 1
+VIMb5BM>P@Hf:4E;dgHn`[2
+!s100 a^bh;8VdiKYTDWC_Y5ZGK2
+R7
+31
+R17
+!i10b 1
+R18
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd|
+Z35 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd|
+!i113 1
+R12
+R13
+Acon
+R2
+R3
+R4
+DEx4 work 10 controller 0 22 IMb5BM>P@Hf:4E;dgHn`[2
+!i122 17
+l19
+L14 114
+V1CdfgleoaP`ziK]I7^Lk10
+!s100 JhVe6bLobT]Fgb`5]C;c^1
+R7
+31
+R17
+!i10b 1
+R18
+R34
+R35
+!i113 1
+R12
+R13
+n6a5e
+Edata_memory
+Z36 w1683393584
+R2
+R3
+R4
+!i122 13
+R0
+Z37 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd
+Z38 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd
+l0
+L6 1
+VW^gAgl944PATK72e3AdZW1
+!s100 Km71D6i?Lhd6R4Uho=GMN1
+R7
+31
+R17
+!i10b 1
+R18
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd|
+Z40 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd|
+!i113 1
+R12
+R13
+Amem
+R2
+R3
+R4
+DEx4 work 11 data_memory 0 22 W^gAgl944PATK72e3AdZW1
+!i122 13
+l18
+R26
+V>oOUkc0?NhdiB;IMDcdXC2
+!s100 _4`kNW=L9=0P_XAMSOZb81
+R7
+31
+R17
+!i10b 1
+R18
+R39
+R40
+!i113 1
+R12
+R13
+Edatapath
+Z41 w1683391308
+R2
+R3
+R4
+!i122 16
+R0
+Z42 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd
+Z43 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd
+l0
+L6 1
+VEDET7@P>eCEo`XZ=OR4mj1
+!s100 bWj=QGW9]1Yk7K1P0lGZT3
+R7
+31
+R17
+!i10b 1
+R18
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd|
+Z45 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd|
+!i113 1
+R12
+R13
+Apath
+R2
+R3
+R4
+DEx4 work 8 datapath 0 22 EDET7@P>eCEo`XZ=OR4mj1
+!i122 16
+l98
+L10 112
+V3Y`ceKCFfX^ig3fiL6z>c0
+!s100 zamkAj5P>Ag7JjDP3X_gG3
+R7
+31
+R17
+!i10b 1
+R18
+R44
+R45
+!i113 1
+R12
+R13
+Edecider
+R1
+R2
+R3
+R4
+!i122 21
+R0
+Z46 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd
+Z47 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd
+l0
+L6 1
+VL5hBRj]m[[kMGLhWXQ<hN2
+!s100 oT1mh_GGAI6Ygfh=MTP_L2
+R7
+31
+R8
+!i10b 1
+R9
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd|
+Z49 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd|
+!i113 1
+R12
+R13
+Adec
+R2
+R3
+R4
+DEx4 work 7 decider 0 22 L5hBRj]m[[kMGLhWXQ<hN2
+!i122 21
+l14
+L13 13
+V79baIQl5K72o`5ZkmWBD;0
+!s100 Q;JcQPfBoe6^3HUJlaCZ=0
+R7
+31
+R8
+!i10b 1
+R9
+R48
+R49
+!i113 1
+R12
+R13
+Edut
+R14
+R3
+R4
+!i122 0
+R0
+Z50 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl
+Z51 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl
+l0
+L7 1
+V@H_;@D=UDATnOl1lZTfnB3
+!s100 ;FkG@OG1hcRd[WZ1n9CXH0
+R7
+31
+Z52 !s110 1683394478
+!i10b 1
+Z53 !s108 1683394478.000000
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl|
+Z55 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 @H_;@D=UDATnOl1lZTfnB3
+!i122 0
+l16
+L12 16
+VWGEI]ReQQLUz??]Q>KQ162
+!s100 OHSeOlzOXO1PhaFFKG;_K1
+R7
+31
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R12
+R13
+Eextender
+R14
+R2
+R3
+R4
+!i122 12
+R0
+Z56 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd
+Z57 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd
+l0
+L5 1
+Vzk_>N`zaFG[WiFDW@I5UI3
+!s100 fJbO_9MnZk]`[VA`1X1kB0
+R7
+31
+R17
+!i10b 1
+R18
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd|
+Z59 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 extender 0 22 zk_>N`zaFG[WiFDW@I5UI3
+!i122 12
+l10
+L9 9
+VQ_1?gf;^MHYm]lC<C9O0G0
+!s100 <P6a1ANhonjW8kYKdWL[]3
+R7
+31
+R17
+!i10b 1
+R18
+R58
+R59
+!i113 1
+R12
+R13
+Einstruction_memory
+Z60 w1683392227
+R2
+R3
+R4
+!i122 11
+R0
+Z61 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd
+Z62 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd
+l0
+L6 1
+V5=MikGF=li]Ybn@UmhhJd0
+!s100 _;QJCYjkk19YMcZBb>`<A2
+R7
+31
+Z63 !s110 1683394479
+!i10b 1
+Z64 !s108 1683394479.000000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd|
+Z66 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd|
+!i113 1
+R12
+R13
+Amem
+R2
+R3
+R4
+DEx4 work 18 instruction_memory 0 22 5=MikGF=li]Ybn@UmhhJd0
+!i122 11
+l17
+L13 8
+VljE51NN77UfJ1;?8=@MT91
+!s100 T]agWOifZ]fZoQfWBDES=1
+R7
+31
+R63
+!i10b 1
+R64
+R65
+R66
+!i113 1
+R12
+R13
+Emem_hazard
+Z67 w1683391736
+R2
+R3
+R4
+!i122 26
+R0
+Z68 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd
+Z69 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd
+l0
+L6 1
+VTWiYO:O2b2:XASI^Q>W]S0
+!s100 FjE<7[^25NX0o<^WJV9id3
+R7
+31
+R8
+!i10b 1
+R9
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd|
+Z71 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd|
+!i113 1
+R12
+R13
+Adanger
+R2
+R3
+R4
+DEx4 work 10 mem_hazard 0 22 TWiYO:O2b2:XASI^Q>W]S0
+!i122 26
+l15
+L14 19
+VWAg<SRTD<72bNBfElad:51
+!s100 1F=_iXb<SWP0<[zFi;8NN1
+R7
+31
+R8
+!i10b 1
+R9
+R70
+R71
+!i113 1
+R12
+R13
+Emux_four_to_one_16bit
+R14
+R3
+R4
+!i122 10
+R0
+Z72 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd
+Z73 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd
+l0
+L4 1
+VGoU0`JbTK7Vh^FUcJPO2<0
+!s100 V63cgj7YVP[X;bA7<3Y>f3
+R7
+31
+R63
+!i10b 1
+R64
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd|
+Z75 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd|
+!i113 1
+R12
+R13
+Astruct
+R3
+R4
+DEx4 work 21 mux_four_to_one_16bit 0 22 GoU0`JbTK7Vh^FUcJPO2<0
+!i122 10
+l11
+Z76 L10 13
+V1e`IcdCo9>N2GUBL>8D`U0
+!s100 ;BX0XL^?HCIAYLkLjd2=92
+R7
+31
+R63
+!i10b 1
+R64
+R74
+R75
+!i113 1
+R12
+R13
+Emux_four_to_one_3bit
+R1
+R3
+R4
+!i122 24
+R0
+Z77 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd
+Z78 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd
+l0
+L4 1
+V71D98O`LNjW?fAcfIJ08z3
+!s100 e]R2F1Bh9zzOL][WmiE7E3
+R7
+31
+R8
+!i10b 1
+R9
+Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd|
+Z80 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd|
+!i113 1
+R12
+R13
+Astruct
+R3
+R4
+DEx4 work 20 mux_four_to_one_3bit 0 22 71D98O`LNjW?fAcfIJ08z3
+!i122 24
+l11
+R76
+VCe[eLaBM0]6S8VkY:zX150
+!s100 QKBbdO8XQ590gHacZF6]?3
+R7
+31
+R8
+!i10b 1
+R9
+R79
+R80
+!i113 1
+R12
+R13
+Emux_two_to_one_16bit
+R1
+R3
+R4
+!i122 9
+R0
+Z81 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd
+Z82 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd
+l0
+L4 1
+V:mG3O6HO9lEX<>Ooaa8em1
+!s100 BWAm>33ZR?cPVoW4`eXQP2
+R7
+31
+R63
+!i10b 1
+R64
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd|
+Z84 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd|
+!i113 1
+R12
+R13
+Astruct
+R3
+R4
+DEx4 work 20 mux_two_to_one_16bit 0 22 :mG3O6HO9lEX<>Ooaa8em1
+!i122 9
+l9
+L8 11
+V9=DDCbob;jO@`NTGCPbj_2
+!s100 F`^f@Ff^_0H^b[keS_8P93
+R7
+31
+R63
+!i10b 1
+R64
+R83
+R84
+!i113 1
+R12
+R13
+Epipe_reg
+R14
+R2
+R3
+R4
+!i122 18
+R0
+Z85 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd
+Z86 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd
+l0
+L7 1
+V8@bgRMA4^;68V<2j9T`CY0
+!s100 j3:[>i?7zX_15J3WQjJgE1
+R7
+31
+R17
+!i10b 1
+R18
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd|
+Z88 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd|
+!i113 1
+R12
+R13
+Areg1
+R2
+R3
+R4
+DEx4 work 8 pipe_reg 0 22 8@bgRMA4^;68V<2j9T`CY0
+!i122 18
+l16
+R26
+VPPaJckDo<>izlzcz]hP<G2
+!s100 X5JbZSbj^42P6aQ1mjZNJ1
+R7
+31
+R17
+!i10b 1
+R18
+R87
+R88
+!i113 1
+R12
+R13
+Ereg_1
+R1
+R3
+R4
+!i122 6
+R0
+Z89 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd
+Z90 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd
+l0
+L5 1
+VZA2YNmi@IMk^AkQM3iQ2J2
+!s100 89DRL=kB4O2PLBz45zaQj3
+R7
+31
+R63
+!i10b 1
+R64
+Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd|
+Z92 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd|
+!i113 1
+R12
+R13
+Areg1
+R3
+R4
+DEx4 work 5 reg_1 0 22 ZA2YNmi@IMk^AkQM3iQ2J2
+!i122 6
+l14
+L12 26
+VC80N?nIg:NL>:8F;8cW?81
+!s100 n5z;Cb7l2T8Tb@F7dLiTe3
+R7
+31
+R63
+!i10b 1
+R64
+R91
+R92
+!i113 1
+R12
+R13
+Ereg_hazard
+Z93 w1683370638
+R2
+R3
+R4
+!i122 1
+R0
+Z94 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd
+Z95 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd
+l0
+L6 1
+VAD:z1D^H6<Yn63JlhDORA1
+!s100 kjek]6BChHC5dB>mX^F=F2
+R7
+31
+R52
+!i10b 1
+R53
+Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd|
+Z97 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd|
+!i113 1
+R12
+R13
+Adanger
+R2
+R3
+R4
+DEx4 work 10 reg_hazard 0 22 AD:z1D^H6<Yn63JlhDORA1
+!i122 1
+l19
+L18 43
+VDVOQ??QS?kIA9F1FmT7Hc2
+!s100 UKkm[@G8HeY4]NAkD[7EA0
+R7
+31
+R52
+!i10b 1
+R53
+R96
+R97
+!i113 1
+R12
+R13
+Eregister_file
+R1
+R2
+R3
+R4
+!i122 8
+R0
+Z98 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd
+Z99 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd
+l0
+L6 1
+VUA8m<jL07cg[05U7HYIWJ1
+!s100 kBOzl9>j5G<V=YOdD<?`23
+R7
+31
+R63
+!i10b 1
+R64
+Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd|
+Z101 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 13 register_file 0 22 UA8m<jL07cg[05U7HYIWJ1
+!i122 8
+l18
+L14 30
+VVcVMSi;OHEIke=11=DZoR2
+!s100 57S]J4M6z8`i8^klXRTTg0
+R7
+31
+R63
+!i10b 1
+R64
+R100
+R101
+!i113 1
+R12
+R13
+Esix_extender
+R1
+R2
+R3
+R4
+!i122 7
+R0
+Z102 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd
+Z103 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd
+l0
+L5 1
+V7k0;XV_LC^2oCMcT;5n=f2
+!s100 zFODl^=DR23QoKRNHaPJ01
+R7
+31
+R63
+!i10b 1
+R64
+Z104 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd|
+Z105 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 12 six_extender 0 22 7k0;XV_LC^2oCMcT;5n=f2
+!i122 7
+l10
+L9 11
+VjSdBc3MjV8OC02m6@H[>_1
+!s100 ^Wiij6V39HbcYMcVMz`Uj1
+R7
+31
+R63
+!i10b 1
+R64
+R104
+R105
+!i113 1
+R12
+R13
+Estage_1
+Z106 w1683386076
+R2
+R3
+R4
+!i122 5
+R0
+Z107 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd
+Z108 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd
+l0
+L6 1
+Vz26@lY1F@;OYHclUXi3e23
+!s100 6FdLe>=GQ[]5@GLcJHAA43
+R7
+31
+R63
+!i10b 1
+R64
+Z109 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd|
+Z110 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd|
+!i113 1
+R12
+R13
+Apath_1
+R2
+R3
+R4
+DEx4 work 7 stage_1 0 22 z26@lY1F@;OYHclUXi3e23
+!i122 5
+l95
+L15 101
+VeIcMcJ7dKAcH1hE<bAjca3
+!s100 ?kB_Feh[3WbZea6Sihj4M1
+R7
+31
+R63
+!i10b 1
+R64
+R109
+R110
+!i113 1
+R12
+R13
+Estage_2
+R1
+R2
+R3
+R4
+!i122 22
+R0
+Z111 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd
+Z112 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd
+l0
+L6 1
+VOaVZf5U<Je2`K0eR7]NXk3
+!s100 IBOn?acNHfgPQ>9I]KVEL3
+R7
+31
+R8
+!i10b 1
+R9
+Z113 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd|
+Z114 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd|
+!i113 1
+R12
+R13
+Apath_2
+R2
+R3
+R4
+DEx4 work 7 stage_2 0 22 OaVZf5U<Je2`K0eR7]NXk3
+!i122 22
+l32
+L12 31
+VT4g:T`GS30hCbB[U45BMH1
+!s100 R[COnhPK@<1nzA9z_bJ4=1
+R7
+31
+R8
+!i10b 1
+R9
+R113
+R114
+!i113 1
+R12
+R13
+Estage_3
+Z115 w1683385058
+R2
+R3
+R4
+!i122 23
+R0
+Z116 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd
+Z117 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd
+l0
+L6 1
+VOn4C2?;FiB9Ahagkz;d9T0
+!s100 h:oDKH7N791]Q4d?jJd?n0
+R7
+31
+R8
+!i10b 1
+R9
+Z118 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd|
+Z119 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd|
+!i113 1
+R12
+R13
+Apath_3
+R2
+R3
+R4
+DEx4 work 7 stage_3 0 22 On4C2?;FiB9Ahagkz;d9T0
+!i122 23
+l66
+L16 104
+V1[mnY8YWWXF3`DiPlDhaB0
+!s100 Sb?1kCdTEmf60J@IT;feX2
+R7
+31
+R8
+!i10b 1
+R9
+R118
+R119
+!i113 1
+R12
+R13
+Estage_4
+Z120 w1683394308
+R2
+R3
+R4
+!i122 4
+R0
+Z121 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd
+Z122 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd
+l0
+L6 1
+V?>R<2lPazl?G4ZCBZkPfW1
+!s100 :YHG`fgYHNH4bSXn6:OIo3
+R7
+31
+R63
+!i10b 1
+R64
+Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd|
+Z124 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd|
+!i113 1
+R12
+R13
+Apath_4
+R2
+R3
+R4
+DEx4 work 7 stage_4 0 22 ?>R<2lPazl?G4ZCBZkPfW1
+!i122 4
+l52
+L15 87
+VR>T]?LhjZ`DN1`=mFgPKY2
+!s100 Z?>;WMRQ?K<PaFoDc1EzZ0
+R7
+31
+R63
+!i10b 1
+R64
+R123
+R124
+!i113 1
+R12
+R13
+Estage_5
+Z125 w1683392761
+R2
+R3
+R4
+!i122 3
+R0
+Z126 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd
+Z127 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd
+l0
+L6 1
+V4;9bKgHNS?c4=koZV6XVh2
+!s100 LQe[_BhZoWNl2fj;`ihUO3
+R7
+31
+R52
+!i10b 1
+R53
+Z128 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd|
+Z129 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd|
+!i113 1
+R12
+R13
+Apath_5
+R2
+R3
+R4
+DEx4 work 7 stage_5 0 22 4;9bKgHNS?c4=koZV6XVh2
+!i122 3
+l59
+L19 65
+V<ST5K92KATFLoATLX1[BH3
+!s100 5hU7FfVZbaJSYP5ZUgP3]3
+R7
+31
+R52
+!i10b 1
+R53
+R128
+R129
+!i113 1
+R12
+R13
+Estage_6
+Z130 w1683390898
+R2
+R3
+R4
+!i122 2
+R0
+Z131 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd
+Z132 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd
+l0
+L6 1
+V?6AZ<_RgTD<n[aM0_lgi41
+!s100 d3jPYYUlfZ=R?F6SQcMSc0
+R7
+31
+R52
+!i10b 1
+R53
+Z133 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd|
+Z134 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd|
+!i113 1
+R12
+R13
+Apath_6
+R2
+R3
+R4
+DEx4 work 7 stage_6 0 22 ?6AZ<_RgTD<n[aM0_lgi41
+!i122 2
+l16
+L15 17
+VH74EJl4cn0_?RKhnhN]7g0
+!s100 56IBCjnf>3ekKdZVFj8WA0
+R7
+31
+R52
+!i10b 1
+R53
+R133
+R134
+!i113 1
+R12
+R13
+Etemp_reg
+Z135 w1683385779
+R2
+R3
+R4
+!i122 19
+R0
+Z136 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd
+Z137 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd
+l0
+L7 1
+VEX>zS_Fj6Z5J_PkRV5MjM1
+!s100 ezbIHBYGm3EVShfO5in370
+R7
+31
+R8
+!i10b 1
+R9
+Z138 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd|
+Z139 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd|
+!i113 1
+R12
+R13
+Areg1
+R2
+R3
+R4
+DEx4 work 8 temp_reg 0 22 EX>zS_Fj6Z5J_PkRV5MjM1
+!i122 19
+l36
+L14 39
+V]R9Z21VnE<WEnMMlM0Q3a3
+!s100 UJ;4giF;gaGNLDI;ghYEA0
+R7
+31
+R8
+!i10b 1
+R9
+R138
+R139
+!i113 1
+R12
+R13
+Etestbench
+R1
+R4
+R3
+!i122 27
+R0
+Z140 8C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl
+Z141 FC:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+Z142 !s110 1683394482
+!i10b 1
+R9
+Z143 !s90 -reportprogress|300|-93|-work|work|C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl|
+!s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 27
+l69
+L9 132
+Vj[l[]j;[A6C`TSeb3L8J]3
+!s100 M6lCZWIkj2_GGL<j4a_lg3
+R7
+31
+R142
+!i10b 1
+R9
+R143
+Z144 !s107 C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl|
+!i113 1
+R12
+R13

@@ -1,0 +1,427 @@
+# Reading pref.tcl
+# do RISC_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:38 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 23:04:38 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:38 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/reg_hazard.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_hazard
+# -- Compiling architecture danger of reg_hazard
+# End time: 23:04:38 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:38 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Stage_6
+# -- Compiling architecture path_6 of Stage_6
+# End time: 23:04:38 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:38 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Stage_5
+# -- Compiling architecture path_5 of Stage_5
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Stage_4
+# -- Compiling architecture path_4 of Stage_4
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Stage_1
+# -- Compiling architecture path_1 of Stage_1
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_1bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_1
+# -- Compiling architecture reg1 of reg_1
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/six_extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity six_extender
+# -- Compiling architecture Struct of six_extender
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture arch of Register_File
+# ** Warning: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/register_file.vhd(23): (vcom-1246) Range 7 to 0 is null.
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-two-to-one-16bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_two_to_one_16bit
+# -- Compiling architecture Struct of mux_two_to_one_16bit
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-16bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_four_to_one_16bit
+# -- Compiling architecture Struct of mux_four_to_one_16bit
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:39 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Instruction_Memory
+# -- Compiling architecture mem of Instruction_Memory
+# End time: 23:04:39 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity extender
+# -- Compiling architecture Struct of extender
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Data_Memory
+# -- Compiling architecture mem of Data_Memory
+# ** Warning: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Data_Memory.vhd(24): (vcom-1246) Range 255 to 0 is null.
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_generator
+# -- Compiling architecture bhv of clock_generator
+# ** Warning: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/clock.vhd(14): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture Struct of alu
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Datapath
+# -- Compiling architecture path of Datapath
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Controller
+# -- Compiling architecture con of Controller
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:40 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Pipeline_Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Pipe_reg
+# -- Compiling architecture reg1 of Pipe_reg
+# End time: 23:04:40 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Temp_Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Temp_reg
+# -- Compiling architecture reg1 of Temp_reg
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Add_Immediate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Add_Imm
+# -- Compiling architecture Behavioral of Add_Imm
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/decider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decider
+# -- Compiling architecture dec of decider
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Stage_2
+# -- Compiling architecture path_2 of Stage_2
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Stage_3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Stage_3
+# -- Compiling architecture path_3 of Stage_3
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mux-four-to-one-3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_four_to_one_3bit
+# -- Compiling architecture Struct of mux_four_to_one_3bit
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/BigPreg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Big_Pipe_reg
+# -- Compiling architecture reg1 of Big_Pipe_reg
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/mem_hazard.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem_hazard
+# -- Compiling architecture danger of mem_hazard
+# End time: 23:04:41 on May 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:41 on May 06,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 23:04:42 on May 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 23:04:42 on May 06,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading ieee.numeric_std(body)
+# Loading work.datapath(path)
+# Loading work.clock_generator(bhv)
+# Loading work.stage_1(path_1)
+# Loading work.register_file(arch)
+# Loading work.instruction_memory(mem)
+# Loading work.add_imm(behavioral)
+# Loading work.six_extender(struct)
+# Loading work.mux_two_to_one_16bit(struct)
+# Loading work.temp_reg(reg1)
+# Loading work.pipe_reg(reg1)
+# Loading work.stage_2(path_2)
+# Loading work.controller(con)
+# Loading work.stage_3(path_3)
+# Loading work.extender(struct)
+# Loading work.reg_hazard(danger)
+# Loading work.mux_four_to_one_16bit(struct)
+# Loading work.mux_four_to_one_3bit(struct)
+# Loading work.big_pipe_reg(reg1)
+# Loading work.stage_4(path_4)
+# Loading work.decider(dec)
+# Loading work.alu(struct)
+# Loading work.reg_1(reg1)
+# Loading work.stage_5(path_5)
+# Loading work.data_memory(mem)
+# Loading work.mem_hazard(danger)
+# Loading work.stage_6(path_6)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/dut_instance/add_instance/outp has no driver.
+# This port will contribute value (U) to the signal network.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/S5/Data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/S5/Data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/S1/IM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/S1/IM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/S1/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/S1/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/S1/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/S1/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/S5/Data_mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/S5/Data_mem
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 1, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 57 ns  Iteration: 0  Instance: /testbench
+# ** Fatal: (vsim-3734) Index value 256 is out of range 0 to 255.
+#    Time: 2580 ns  Iteration: 3  Process: /testbench/dut_instance/add_instance/S1/IM/line__18 File: C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd
+# Fatal error in Architecture mem at C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd line 18
+# 
+# HDL call sequence:
+# Stopped at C:/Users/HP/Downloads/cpu0612/IITB-Pipe-CPU/Instruction_Memory.vhd 18 Architecture mem
+# 
+# End time: 23:06:11 on May 06,2023, Elapsed time: 0:01:29
+# Errors: 4, Warnings: 11

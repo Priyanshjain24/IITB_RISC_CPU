@@ -1,0 +1,71 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Stage_3 is
+	port( clk, rst: in std_logic;
+	RF_A1, RF_A2: out std_logic_vector(2 downto 0);
+	RF_D1, RF_D2: in std_logic_vector(15 downto 0);
+	P2_O: in std_logic_vector(50 downto 0);
+	P3_I: out std_logic_vector(50 downto 0));
+end entity;
+
+architecture path_3 of Stage_3 is
+
+----------------------------------------------------Components-----------------------------------------------------
+
+component six_extender is
+  port (A: in std_logic_vector(5 downto 0); B: out std_logic_vector(15 downto 0));
+end component;
+
+component extender is
+  port (A: in std_logic_vector(8 downto 0); B: out std_logic_vector(15 downto 0));
+end component;
+
+component mux_two_to_one_16bit is
+	port(A,B : in std_logic_vector(15 downto 0); 
+	S : in std_logic;
+	Z: out std_logic_vector(15 downto 0));
+end component;
+
+component mux_four_to_one_16bit is
+	port(A,B,C,D : in std_logic_vector(15 downto 0); 
+	S : in std_logic_vector(1 downto 0);
+	Z: out std_logic_vector(15 downto 0));
+end component;
+
+-------------------------------------------------------Signals----------------------------------------------------
+
+signal instruction, ALU_a, ALU_b: std_logic_vector(15 downto 0);
+signal RF_A3: std_logic_vector(2 downto 0);
+-- signal imm_se, imm_e, D1, D2: std_logic_vector(15 downto 0);
+-- signal im_6: std_logic_vector(5 downto 0);
+-- signal im_9: std_logic_vector(8 downto 0);
+-- signal zero: std_logic_vector(15 downto 0) := "0000000000000000";
+-- signal X1 : std_logic;
+-- signal X2: std_logic_vector(1 downto 0);
+
+-------------------------------------------------------Datapath---------------------------------------------------
+
+-- signed_6: six_extender port map (im_6, Im_se);
+-- extend: extender port map (im_9, im_e);
+-- MUX_1: mux_two_to_one_16bit port map (D1, zero, X1, ALU_a);
+-- MUX_2: mux_four_to_one_16bit port map (D2, Imm_se, Imm_e, zero, X2, ALU_b);
+
+--------------------------------------------------Extra Connections-----------------------------------------------
+
+instruction <= P2_O(22 downto 7);
+RF_A1 <= instruction(11 downto 9);
+RF_A2 <= instruction(8 downto 6);
+RF_A3 <= instruction(5 downto 3);
+-- im_6 <= instruction(5 downto 3);
+-- im_9 <= instruction (8 downto 0);
+ALU_a <= RF_D1;
+ALU_b <=RF_D2;
+P3_I <= "00000000" & ALU_a & ALU_b & RF_A3 & P2_O (6 downto 0);
+
+------------------------------------------------------------------------------------------------------------------
+
+end architecture;
+

@@ -1,0 +1,64 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Stage_4 is
+	port( clk, rst;
+	P3_O: in std_logic_vector(50 downto 0);
+	P4_I: out std_logic_vector(50 downto 0););
+end entity;
+
+architecture path_4 of Stage_4 is
+
+----------------------------------------------------Components-----------------------------------------------------
+
+component decider is
+	port(W_RF: in std_logic;
+	decide: in std_logic_vector(1 downto 0);
+	C, Z: in std_logic; -- from alu
+	RF_w: out std_logic);
+end component;
+
+component alu is
+	port(
+		A,B: in std_logic_vector(15 downto 0);
+		C_in: in std_logic;
+        car: in std_logic;
+		op: in std_logic_vector(2 downto 0);
+		output: out std_logic_vector(15 downto 0);
+		C,Z: out std_logic) ;
+end component;
+
+entity reg_1 is
+    port(
+      clk, rst, wr: in std_logic;
+      Din: in std_logic;
+      Dout: out std_logic);
+    end entity;
+
+-------------------------------------------------------Signals----------------------------------------------------
+
+signal instruction, ALU_a, ALU_b, ALU_C: std_logic_vector(15 downto 0);
+signal decide: std_logic_vector(1 downto 0); 
+signal Z_w, C_w, car, W_RF, RF_w, C_o, Z_o, C_flag, Z_flag: std_logic;
+signal ALU_cs: std_logic_vector(2 downto 0);
+
+-------------------------------------------------------Datapath---------------------------------------------------
+
+decider: decider port map(W_RF, decide, C_o, Z_o, RF_W);
+ALU: alu port map (ALU_a, ALU_b, C_flag, car, ALU_cs, ALU_C, C_o, Z_o)
+C: reg_1 port map (clk, rst, C_w, C_o, C_flag);
+Z: reg_1 port map (clk, rst, Z_w, Z_o, Z_flag);
+
+--------------------------------------------------Extra Connections-----------------------------------------------
+
+W_RF <= P3_O(4);
+ALU_a <= P3_O(41 downto 26);
+ALU_b <= P3_O(25 downto 10);
+P4_I <= "000000000000000000000000000000" & ALU_C & PC_O(9 downto 7) & RF_w;
+
+------------------------------------------------------------------------------------------------------------------
+
+end architecture;
+

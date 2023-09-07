@@ -1,0 +1,113 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Stage_1 is
+	port( clk, rst: in std_logic;
+	RF_A1, RF_A2, RF_A_W : in std_logic_vector (2 downto 0);
+	RF_D_IN: in std_logic_vector(15 downto 0);
+	RF_w: in std_logic;
+	RF_O1, RF_O2 : out std_logic_vector(15 downto 0);
+	P1_I: out std_logic_vector(50 downto 0));
+end entity;
+
+architecture path_1 of Stage_1 is
+
+----------------------------------------------------Components-----------------------------------------------------
+
+component Instruction_Memory is
+  port(
+    PC: in std_logic_vector(15 downto 0);
+    O1: out std_logic_vector(7 downto 0));
+	 O2: out std_logic_vector(7 downto 0));
+end component;
+
+component Register_File is
+  port(
+    clk, rst, wr: in std_logic;
+    A1,A2,Aw: in std_logic_vector(2 downto 0);
+	 Din, PC_i: in std_logic_vector(15 downto 0);
+    Dout1, Dout2, PC_o: out std_logic_vector(15 downto 0));
+end component;
+
+component Temp_reg is
+	port(
+	  clk, rst, wr: in std_logic;
+	  Din: in std_logic_vector(15 downto 0);
+	  Dout: out std_logic_vector(15 downto 0));
+end component;
+
+component Pipe_reg is
+	port(
+	  clk, rst, wr: in std_logic;
+	  Din: in std_logic_vector(50 downto 0);
+	  Dout: out std_logic_vector(50 downto 0));
+end component;
+
+component extender is
+  port (A: in std_logic_vector(8 downto 0); B: out std_logic_vector(15 downto 0));
+end component;
+
+component Adder is
+  port (
+    A: in std_logic_vector(15 downto 0);   
+    C: out std_logic_vector(15 downto 0));
+end component;
+
+component Add_Imm is
+  port (
+    PC, Imm: in std_logic_vector(15 downto 0);
+    C: out std_logic_vector(15 downto 0));
+end component;
+
+component mux_two_to_one_1bit is
+	port(A,B,S: in std_logic; Z: out std_logic);
+end component;
+
+component mux_two_to_one_16bit is
+	port(A,B: in std_logic_vector(15 downto 0); S: in std_logic; Z: out std_logic_vector(15 downto 0));
+end component;
+
+component mux_four_to_one_1bit is
+	port(A,B,C,D : in std_logic; 
+	S : in std_logic_vector(1 downto 0);
+	Z: out std_logic);
+component mux_four_to_one;
+
+component mux_four_to_one_16bit is
+	port(A,B,C,D : in std_logic_vector(15 downto 0); 
+	S : in std_logic_vector(1 downto 0);
+	Z: out std_logic_vector(15 downto 0));
+end component;
+
+-------------------------------------------------------Signals----------------------------------------------------
+
+signal PC_I, PC_O: std_logic_vector(15 downto 0);
+signal IS_H, IS_L: std_logic_vector(7 downto 0);
+signal Imm: std_logic_vector(8 downto 0);
+signal PC, INST, Imm_ext: std_logic_vector(15 downto 0);
+signal clk, rst, RF_w, PC_T_w: std_logic;
+signal one: std_logic_vector(15 downto 0) := "0000000000000001";
+
+-------------------------------------------------------Datapath---------------------------------------------------
+
+RF: Register_File port map (clk, rst, RF_w, RF_A1, RF_A2, RF_A_W, RF_D_IN, PC_I, RF_O1, RF_O2, PC_O);
+IM: Instruction_Memory port map (PC_O, IS_H, IS_L);
+ADD: Add_Imm port map (PC_O, INC, PC_I);	
+EX: extender port map (Imm, Imm_ext)
+MUX_PC_ADD: mux_two_to_one_16bit port map (one, Imm_ext, X_PC, INC);
+-- PC_T: Temp_reg port map (clk, rst, PC_T_w, PC_I, PC_T_O);
+-- MUX_RF_D: mux_two_to_one_16bit port map (RF_D, PC_I, X_RF_D_IN, RF_D_IN);
+
+--------------------------------------------------Extra Connections-----------------------------------------------
+
+INST <= IS_H & IS_L;
+Imm <= INST(8 downto 0); 
+X_PC <= '0';
+output <= "0000000000000000000000000000000000" & INST;
+
+------------------------------------------------------------------------------------------------------------------
+
+end architecture;
+
